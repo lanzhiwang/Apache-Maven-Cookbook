@@ -16,7 +16,10 @@
     </dependency>
   </dependencies>
   <properties>
-      <JAVA8.HOME>C:/Program Files/Java/jdk1.8.0_20</JAVA8.HOME>
+      <JAVA11.HOME>/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home</JAVA11.HOME>
+      <!-- <maven.compiler.source>11</maven.compiler.source>
+      <maven.compiler.target>11</maven.compiler.target>
+      -Dmaven.compiler.source=11 -Dmaven.compiler.target=11 -->
   </properties>
   <build>
     <plugins>
@@ -24,13 +27,25 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.2</version>
+        <executions>
+          <execution>
+            <id>compile</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+        </executions>
         <configuration>
           <verbose>true</verbose>
           <fork>true</fork>
-          <executable>${JAVA8.HOME}/bin/javac</executable>
-          <compilerVersion>1.8</compilerVersion>
+          <executable>${JAVA11.HOME}/bin/javac</executable>
+          <compilerVersion>11</compilerVersion>
+          <source>11</source>
+          <target>11</target>
         </configuration>
       </plugin>
+
     </plugins>
   </build>
   

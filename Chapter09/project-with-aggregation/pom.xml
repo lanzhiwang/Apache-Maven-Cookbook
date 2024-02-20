@@ -27,5 +27,6 @@
   </dependencies>
   <modules>
       <module>aggregate-child</module>
+      <!-- <module>../aggregate-child</module> -->
   </modules>
 </project>
