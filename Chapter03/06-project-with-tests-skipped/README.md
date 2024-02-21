@@ -56,6 +56,8 @@ $ mvn -s /usr/src/Apache-Maven-Cookbook/settings.xml test
 [INFO] ------------------------------------------------------------------------
 $
 
+#####################################################################
+
 $ mvn -s /usr/src/Apache-Maven-Cookbook/settings.xml help:describe \
 -Ddetail \
 -DgroupId=org.apache.maven.plugins \
@@ -556,5 +558,15 @@ surefire:test
 [INFO] Finished at: 2024-02-20T11:55:26Z
 [INFO] ------------------------------------------------------------------------
 $
+
+#####################################################################
+
+$ mvn -s /usr/src/Apache-Maven-Cookbook/settings.xml -D skipTests=true package
+
+#####################################################################
+
+$ mvn -s /usr/src/Apache-Maven-Cookbook/settings.xml -D maven.test.skip=true package
+
+#####################################################################
 
 ```
